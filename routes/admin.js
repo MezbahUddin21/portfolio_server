@@ -228,7 +228,7 @@ router.delete('/programming/:id', authMiddleware, async (req, res) => {
   }
 });
 
-// ====================== Highlights Admin Routes ======================
+// ====================== Highlights Ad min Routes ======================
 
 // Create highlight (requires auth)
 router.post('/highlights', authMiddleware, async (req, res) => {

@@ -19,13 +19,14 @@ const mailTransporter = nodemailer.createTransport({
   tls: { rejectUnauthorized: false },
 });
 
-mailTransporter.verify((error, success) => {
-  if (error) {
-    console.warn('Mail transporter verify error:', error);
-  } else {
-    console.log('Mail transporter is ready to send messages');
-  }
-});
+// Optional: Verify mail transporter
+// mailTransporter.verify((error, success) => {
+//   if (error) {
+//     console.warn('Mail transporter verify error:', error);
+//   } else {
+//     console.log('Mail transporter is ready to send messages');
+//   }
+// });
 
 // Get all contacts (for admin)
 router.get('/', async (req, res) => {
